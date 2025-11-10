@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogo
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+  <!-- Titolo e autore collegati a Wikidata -->
+  <dc:title rdf:resource="https://www.wikidata.org/wiki/Q105364">C'era una volta in America</dc:title>
+  <dc:creator rdf:resource="https://www.wikidata.org/wiki/Q72552">Sergio Leone</dc:creator>
+
+  <!-- Soggetti con link a vocabolari controllati -->
+  <dc:subject rdf:resource="http://vocab.getty.edu/aat/300264604">Gangster</dc:subject>
+  <dc:subject rdf:resource="http://vocab.getty.edu/aat/300028124">Crimine organizzato</dc:subject>
+  <dc:subject rdf:resource="https://www.wikidata.org/wiki/Q11424">Film drammatico</dc:subject>
+
+  <!-- Luoghi collegati a Getty TGN e Wikidata -->
+  <dc:coverage rdf:resource="http://vocab.getty.edu/tgn/7013393">New York City</dc:coverage>
+  <dc:coverage rdf:resource="https://www.wikidata.org/wiki/Q30">Stati Uniti</dc:coverage>
+  <dc:coverage rdf:resource="https://www.wikidata.org/wiki/Q38">Italia</dc:coverage>
+
+  <!-- Descrizione -->
+  <dc:description>
+    Un’epopea che attraversa decenni nella vita di un gruppo di amici d’infanzia del Lower East Side di New York,
+    ebrei che diventano gangster durante il proibizionismo. Il film affronta i temi di amicizia, amore, tradimento e memoria.
+  </dc:description>
+
+  <!-- Produzione -->
+  <dc:publisher>The Ladd Company; Embassy International Pictures; PSO Enterprises; Rafran Cinematografica</dc:publisher>
+  <dc:contributor rdf:resource="https://www.wikidata.org/wiki/Q38111">Robert De Niro</dc:contributor>
+  <dc:contributor rdf:resource="https://www.wikidata.org/wiki/Q170120">James Woods</dc:contributor>
+  <dc:contributor rdf:resource="https://www.wikidata.org/wiki/Q343221">Elizabeth McGovern</dc:contributor>
+
+  <!-- Data e tipo -->
+  <dc:date>1984</dc:date>
+  <dc:type>Moving Image</dc:type>
+  <dc:format>35 mm film</dc:format>
+
+  <!-- Identificatore e fonti -->
+  <dc:identifier>https://www.imdb.com/title/tt0087843/</dc:identifier>
+  <dc:source>IMDb; Wikipedia; Europeana</dc:source>
+
+  <!-- Collegamenti LOD -->
+  <dc:relation rdf:resource="https://www.europeana.eu/item/09102/_UEDIN_214">Locandina d’epoca su Europeana</dc:relation>
+  <dc:relation rdf:resource="https://www.wikidata.org/wiki/Q3282396">Colonna sonora di Ennio Morricone</dc:relation>
+  <dc:relation rdf:resource="https://www.wikidata.org/wiki/Q188473">Ennio Morricone (compositore)</dc:relation>
+  <dc:relation rdf:resource="https://www.wikidata.org/wiki/Q1072306">Cinematografia italiana</dc:relation>
+
+  <!-- Copertura temporale -->
+  <dcterms:temporal>1920–1968</dcterms:temporal>
+
+  <!-- Diritti e licenza -->
+  <dc:rights>
+    © 1984 Embassy International Pictures / The Ladd Company / Rafran Cinematografica.
+    Distribuito anche sotto licenza 
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    Autore del dataset: Giulia Pizi, Università di Bologna.
+  </dc:rights>
+
+</catalogo>

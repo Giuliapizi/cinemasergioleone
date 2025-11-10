@@ -1,0 +1,36 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>C'era una volta in America</title>
+<author>Sergio Leone</author>
+</titleStmt>
+<publicationStmt>
+<publisher>The Ladd Company / Embassy International Pictures / Rafran Cinematografica</publisher>
+<pubPlace>USA / Italia</pubPlace>
+<date when="1984">1984</date>
+<availability>
+<p>© 1984 Embassy International Pictures / Rafran Cinematografica. Tutti i diritti riservati.</p>
+</availability>
+</publicationStmt>
+<sourceDesc>
+<bibl>
+<title level="m">C'era una volta in America</title>
+<author>Sergio Leone</author>
+<pubPlace>USA / Italia</pubPlace>
+<publisher>The Ladd Company / Embassy International Pictures / Rafran Cinematografica</publisher>
+<date when="1984">1984</date>
+<biblScope unit="film">35 mm</biblScope>
+</bibl>
+</sourceDesc>
+</fileDesc>
+</teiHeader>
+<text>
+<body>
+<div type="descrizione" n="1">
+<head>Sinossi</head>
+<p xml:lang="it"> Il film, strutturato con flashback e flashforward, racconta in un arco temporale di oltre quattro decenni (dagli anni Venti ai Sessanta del Novecento) le vite di David “Noodles” Aaronson e Maximilian "Max" Bercovicz e dei loro amici che si fanno strada dal quartiere ebraico di New York al proibizionismo fino alla scalata ai vertici della criminalità organizzata della Grande Mela. </p>
+</div>
+</body>
+</text>
+</TEI>

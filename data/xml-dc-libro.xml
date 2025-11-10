@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogo
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+  <dc:title>C'era una volta il cinema: I miei film, la mia vita</dc:title>
+  <dc:creator>Sergio Leone</dc:creator>
+
+  <!-- Soggetti con link a vocabolari controllati -->
+  <dc:subject rdf:resource="http://vocab.getty.edu/aat/300033618">Cinema italiano</dc:subject>
+  <dc:subject rdf:resource="http://vocab.getty.edu/aat/300055643">Autobiografia</dc:subject>
+  <dc:subject rdf:resource="http://vocab.getty.edu/aat/300027943">Registi</dc:subject>
+
+  <dc:publisher>Il Saggiatore</dc:publisher>
+  <dc:contributor>Noël Simsolo</dc:contributor>
+  <dc:date>2018</dc:date>
+  <dc:type>Testo</dc:type>
+  <dc:type>Autobiografia</dc:type>
+  <dc:type>Intervista</dc:type>
+  <dc:format>Libro</dc:format>
+  <dc:format>Copertina flessibile</dc:format>
+  <dc:identifier>ISBN 978-8842825289</dc:identifier>
+  <dc:source>Il Saggiatore – scheda libro</dc:source>
+  <dc:language>It</dc:language>
+  <dc:rights>© Il Saggiatore, 2018. Tutti i diritti riservati.
+    Distribuito anche sotto <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>. Autore: Giulia Pizi.
+  </dc:rights>
+
+</catalogo>

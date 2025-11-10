@@ -1,0 +1,39 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>C'era una volta il cinema: I miei film, la mia vita</title>
+<author>Sergio Leone</author>
+</titleStmt>
+<publicationStmt>
+<publisher>Bompiani</publisher>
+<pubPlace>Milano</pubPlace>
+<date when="2018">2018</date>
+<idno type="ISBN">9788842825286</idno>
+<availability>
+<p>© Bompiani, 2018. Tutti i diritti riservati.</p>
+</availability>
+</publicationStmt>
+<sourceDesc>
+<bibl>
+<title level="m">C'era una volta il cinema: I miei film, la mia vita</title>
+<author>Sergio Leone</author>
+<editor>Gian Luca Farinelli</editor>
+<pubPlace>Milano</pubPlace>
+<publisher>Bompiani</publisher>
+<date when="2018">2018</date>
+<extent>272 p.</extent>
+<idno type="ISBN">9788842825286</idno>
+</bibl>
+</sourceDesc>
+</fileDesc>
+</teiHeader>
+<text>
+<body>
+<div type="descrizione" n="1">
+<head>Sinossi</head>
+<p xml:lang="it"> C’era una volta il cinema – frutto di quindici anni di dialogo ininterrotto con Noël Simsolo tra Parigi, Cannes e Roma – è il testo cui Leone ha affidato il racconto della propria vita e di tutti i film che ha girato. I fotogrammi dei suoi ricordi portano impressi il cappello di Clint Eastwood e la barba mal rasata di Gian Maria Volonté, le melodie di Ennio Morricone, lo sguardo di Claudia Cardinale e il sorriso offuscato di Robert De Niro, gli incontri con Pier Paolo Pasolini, Klaus Kinski e Orson Welles. Leggere questo memoir-intervista, finora inedito in Italia, è come ritrovare in una vecchia cassetta una voce che si credeva smarrita. Una voce acuta, divertita, ferocemente anticonvenzionale, che fra un aneddoto di vita sul set e una riflessione sul cinema finisce per rivelare i segreti di un regista che ha saputo trasformare gli anni del proibizionismo nel romanzo struggente delle amicizie tradite, delle vendette e degli amori perduti. E che, nell’oblio di una fumeria d’oppio come sulle carrozze di un treno a vapore, ha dipinto l’immagine del tempo mentre fugge via. </p>
+</div>
+</body>
+</text>
+</TEI>
