@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html>
+     <!-- head e body sono i due marcatori che dipendono da html -->
+    <head>
+    <meta charset="UTF-8">
+    
+    <title>Il cinema di Sergio Leone - Item Film</title>
+    
+    <meta name="description" content="Sito dedicato al cinema di Sergio Leone">
+    <meta name="keywords" content="Sergio Leone, film, attori">
+    <meta name="author" content="Giulia Pizi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Proprio CSS -->
+    <link rel="stylesheet" href="stile/stile-copia.css">
+
+    <!-- Dublin Core Metadati -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.Title" content="Il cinema di Sergio Leone">
+    <meta name="DC.Creator" content="Pizi, Giulia">
+    <meta name="DC.Subject" content="Cinema; Letteratura">
+    <meta name="DC.Description" content="Sito web per conoscere il cinema di Sergio Leone">
+    <meta name="DC.Publisher" content="Università di Bologna">
+    <meta name="DC.Date" content="2025">
+    <meta name="DC.Type" content="Text">
+    <meta name="DC.Format" content="HTML">
+    <meta name="DC.Identifier" content="https://www.imdb.com/title/tt0087843/">
+    <meta name="DC.Source" content="Sito web per esame">
+    <meta name="DC.Language" content="it">
+    <meta name="DC.Coverage" content="Bologna">
+
+    <!-- Metadati DC film -->
+    <meta name="DC.title" content="C'era una volta in America">
+    <meta name="DC.creator" content="Sergio Leone">
+    <meta name="DC.contributor" content="Robert De Niro; James Woods">
+    <meta name="DC.date" content="1984">
+    <meta name="DC.type" content="Moving Image">
+    <meta name="DC.format" content="35 mm film">
+    <meta name="DC.identifier" content="https://www.imdb.com/title/tt0087843/">
+    <meta name="DC.language" content="en">
+    <meta name="DC.subject" content="Gangster; New York; crimine organizzato">
+    <meta name="DC.publisher" content="The Ladd Company; Embassy International Pictures; Rafran Cinematografica">
+    <meta name="DC.coverage.spatial" content="Italia; New York Stati Uniti">
+    <meta name="DC.rights" content="© 1984 Embassy International Pictures / Rafran Cinematografica. Tutti i diritti riservati.">
+    <meta name="DC.source" content="IMDb">
+</head>
+
+
+     <body class="filmografia">
+
+        <!-- abbiamo diverse div -->
+        <nav class="navbar navbar-expand-lg custom-navbar shadow-sm fixed-top">
+        <div class="container-fluid">
+        <!-- Brand -->
+       <a class="navbar-brand fw-bold" href="#">Il cinema di Sergio Leone &#127797;</a>
+
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Link -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Lista link -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Introduzione</a>
+        </li>
+
+        <!-- Dropdown Catalogo -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catalogo
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="catalogo.html">Lista</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="mappa.html">Luoghi</a></li>
+            <li><a class="dropdown-item" href="timeline.html">Timeline</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown Percorsi -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Percorsi
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Tematiche</a></li>
+            <li><a class="dropdown-item" href="#">Attori</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    <!-- Barra di ricerca -->
+    <form class="d-flex search-form" role="search">
+    <input class="form-control search-input" type="search" placeholder="Cerca..." aria-label="Search">
+    <button class="btn search-btn" type="submit">Cerca</button>
+    </form>
+    </div>
+  </div>
+</nav>
+
+  
+
+  <div class="hero-catalogo">
+  <h2 class="titolo-catalogo">
+    Lista <span>Film</span>
+  </h2>
+  </div>
+
+
+ 
+  <main class="content-wrapper" style="margin-top:5.5rem; display:flex; flex-direction:column; flex:1;">
+
+    <div class="catalogo-layout">
+      <div class="sidebar">
+        <ul class="breadcrumb breadcrumb-western">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="filmografia.html">Catalogo</a></li>
+          <li>C'era una volta in America</li>
+        </ul>
+  
+  <!-- Bottons -->    
+  <div class="sidebar-buttons">
+  <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="btn btn-cc">
+    <img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="height:24px; margin-right:8px;">
+    Distribuito sotto CC BY 4.0
+  </a>
+ <a href="data/xml-dc-film.xml" download class="btn btn-download">
+    Scarica metadati (XML/DC)
+  </a>
+ <a href="data/xml-tei-film.xml" download class="btn btn-download">
+    Scarica metadati (XML/TEI)
+  </a>
+  </div>
+
+    <div class="sidebar-soundtrack">
+      <h3>Colonne sonore &#127925;</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Deborah's Theme</li>
+        <li class="list-group-item">Once Upon a Time in America</li>
+        <li class="list-group-item">Poverty</li>
+        <li class="list-group-item">Friendship</li>
+      </ul>
+    <a href="https://open.spotify.com/intl-it/track/2AtpXDvuanfljEGelIH909" target="_blank" class="btn btn-sm btn-outline-light mt-3" style="background-color:#a97450; color:#fff3e6;">
+        Ascolta su Spotify
+    </a>
+    </div>
+
+    </div>
+
+      
+
+      <!-- right column -->
+      <div class="rightcolumn">
+        <div class="metadata titolo-item">
+        <h2>C'era una volta in America</h2>
+        </div>
+        <div class="border-section">
+          <!-- img -->
+          <div>
+            <img
+              src="img/onceuponatimeinamerica.jpg"
+              class="responsive img-item"
+              alt="film"
+            />
+          </div>
+          <!-- metadati -->
+          <div class="bg-gray metadata pd-12">
+            <h3>Metadati</h3>
+            <p><span>Titolo:</span> C'era una volta in America</p>
+            <p><span>Creatore:</span> Sergio Leone</p>
+            <p><span>Luogo di creazione:</span> New York, Roma</p>
+            <p><span>Data di creazione:</span> 1984</p>
+            <p><span>Collaboratore:</span> Robert De Niro; James Woods</p>
+            <p><span>Formato:</span> 35mm film</p>
+          </div>
+
+          <!-- metadati -->
+          <div class="bg-gray metadata pd-12">
+            <h3>Descrizione</h3>
+           Il film, strutturato con flashback e flashforward, racconta in un arco temporale di oltre 4 decenni (dagli anni Venti ai Sessanta del Novecento) le vite di David “Noodles” Aaronson e Maximilian "Max" Bercovicz e dei loro amici che si fanno strada dal quartiere ebraico di New York al proibizionismo fino alla scalata ai vertici della criminalità organizzata della Grande Mela.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  
+
+<!-- Pre-footer -->
+<section>
+  <div class="pre-footer">&clubs; Credits | Licenze &clubs;</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer">&copy; Giulia Pizi 2025 - Corso di Digital Humanities e Patrimonio Culturale &#9788;</div>
+</footer>
+
+    
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- script -->
+    <script src="script/script-.js"></script>
+    <script src="js/script-xml.js"></script>
+
+
+    </body>
+</html>

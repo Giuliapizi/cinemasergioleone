@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+    <!-- head e body sono i due marcatori che dipendono da html -->
+    <head>
+    <meta charset="UTF-8">
+    
+    <title>Il cinema di Sergio Leone - Item Libro</title>
+    
+    <meta name="description" content="Sito dedicato al cinema di Sergio Leone">
+    <meta name="keywords" content="Sergio Leone, film, attori, libri">
+    <meta name="author" content="Giulia Pizi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Proprio CSS -->
+    <link rel="stylesheet" href="stile/stile-copia.css">
+
+    <!-- Dublin Core Metadati -->
+    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+    <meta name="DC.Title" content="Il cinema di Sergio Leone">
+    <meta name="DC.Creator" content="Pizi, Giulia">
+    <meta name="DC.Subject" content="Cinema; Letteratura">
+    <meta name="DC.Description" content="Sito web per conoscere il cinema di Sergio Leone">
+    <meta name="DC.Publisher" content="Università di Bologna">
+    <meta name="DC.Date" content="2025">
+    <meta name="DC.Type" content="Text">
+    <meta name="DC.Format" content="HTML">
+    <meta name="DC.Identifier" content="https://www.imdb.com/title/tt0087843/">
+    <meta name="DC.Source" content="Sito web per esame">
+    <meta name="DC.Language" content="it">
+    <meta name="DC.Coverage" content="Bologna">
+
+    <!-- Metadati DC libro  -->
+    <meta name="DC.title" content="C'era una volta il cinema: I miei film, la mia vita">
+    <meta name="DC.creator" content="Sergio Leone">
+    <meta name="DC.contributor" content="Noël Simsolo">
+    <meta name="DC.date" content="2018">
+    <meta name="DC.type" content="Text; Autobiografia/Intervista">
+    <meta name="DC.format" content="Libro; Copertina flessibile">
+    <meta name="DC.identifier" content="ISBN 978-8842825289">
+    <meta name="DC.language" content="it">
+    <meta name="DC.subject" content="Cinema italiano; Autobiografia; Registi">
+    <meta name="DC.publisher" content="Il Saggiatore">
+    <meta name="DC.coverage.spatial" content="Italia">
+    <meta name="DC.rights" content="© Il Saggiatore, 2018. Tutti i diritti riservati.">
+    <meta name="DC.source" content="Il Saggiatore – scheda libro">
+</head>
+
+
+
+
+     <body class="filmografia">
+
+        <!-- abbiamo diverse div -->
+        <nav class="navbar navbar-expand-lg custom-navbar shadow-sm fixed-top">
+        <div class="container-fluid">
+        <!-- Brand -->
+       <a class="navbar-brand fw-bold" href="#">Il cinema di Sergio Leone &#127797;</a>
+
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Link -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Lista link -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Introduzione</a>
+        </li>
+
+        <!-- Dropdown Catalogo -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catalogo
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="catalogo.html">Lista</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="mappa.html">Luoghi</a></li>
+            <li><a class="dropdown-item" href="timeline.html">Timeline</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown Percorsi -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Percorsi
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Tematiche</a></li>
+            <li><a class="dropdown-item" href="#">Attori</a></li>
+          </ul>
+        </li>
+      </ul>
+
+    <!-- Barra di ricerca -->
+    <form class="d-flex search-form" role="search">
+    <input class="form-control search-input" type="search" placeholder="Cerca..." aria-label="Search">
+    <button class="btn search-btn" type="submit">Cerca</button>
+    </form>
+    </div>
+  </div>
+</nav>
+
+  
+
+  <div class="hero-catalogo">
+  <h2 class="titolo-catalogo">
+    Lista <span>Libri</span>
+  </h2>
+  </div>
+
+
+
+  <main class="content-wrapper" style="margin-top:5.5rem; display:flex; flex-direction:column; flex:1;">
+
+    <div class="catalogo-layout">
+      <div class="sidebar">
+        <ul class="breadcrumb breadcrumb-western">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="filmografia.html">Catalogo</a></li>
+          <li>C'era una volta il cinema: I miei film, la mia vita</li>
+        </ul>
+      
+    <!-- Bottons -->
+    <div class="sidebar-buttons">
+    <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" class="btn btn-cc">
+    <img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="CC BY 4.0" style="height:24px; margin-right:8px;">
+    Distribuito sotto CC BY 4.0
+    </a>
+    <a href="data/xml-dc-libro.xml" download class="btn btn-download">
+    Scarica metadati (XML/DC)
+    </a>
+    <a href="data/xml-tei-libro.xml" download class="btn btn-download">
+    Scarica metadati (XML/TEI)
+    </a>
+    </div>
+    </div>
+
+
+      <!-- right column -->
+      <div class="rightcolumn">
+        <div class="metadata titolo-item">
+        <h2>C'era una volta il cinema: I miei film, la mia vita</h2>
+        </div>
+        <div class="border-section">
+          <!-- img -->
+          <div>
+            <img
+              src="img/libroitem.jpg"
+              class="responsive img-item"
+              alt="Libro"
+            />
+          </div>
+          
+          <!-- metadati -->
+          <div class="bg-gray metadata pd-12">
+            <h3>Metadati</h3>
+            <p><span>Titolo:</span>C'era una volta il cinema: I miei film, la mia vita</p>
+            <p><span>Creatore:</span> Sergio Leone</p>
+            <p><span>Contributo:</span> Noël Simsolo</p>
+            <p><span>Data di creazione:</span> 2018</p>
+            <p><span>Editore:</span> Il Saggiatore</p>
+          </div>
+          <!-- metadati -->
+          <div class="bg-gray metadata pd-12">
+            <h3>Descrizione</h3>
+            C’era una volta il cinema – frutto di quindici anni di dialogo ininterrotto con Noël Simsolo tra Parigi, Cannes e Roma – è il testo cui Leone ha affidato il racconto della propria vita e di tutti i fi lm che ha girato. I fotogrammi dei suoi ricordi portano impressi il cappello di Clint Eastwood e la barba mal rasata di Gian Maria Volonté, le melodie di Ennio Morricone, lo sguardo di Claudia Cardinale e il sorriso offuscato di Robert De Niro, gli incontri con Pier Paolo Pasolini, Klaus Kinski e Orson Welles. Leggere questo memoir-intervista, finora inedito in Italia, è come ritrovare in una vecchia cassetta una voce che si credeva smarrita. Una voce acuta, divertita, ferocemente anticonvenzionale, che fra un aneddoto di vita sul set e una riflessione sul cinema finisce per rivelare i segreti di un regista che ha saputo trasformare gli anni del proibizionismo nel romanzo struggente delle amicizie tradite, delle vendette e degli amori perduti. E che, nell’oblio di una fumeria d’oppio come sulle carrozze di un treno a vapore, ha dipinto l’immagine del tempo mentre fugge via.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+
+<!-- Pre-footer -->
+<section>
+  <div class="pre-footer">&clubs; Credits | Licenze &clubs;</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer">&copy; Giulia Pizi 2025 - Corso di Digital Humanities e Patrimonio Culturale &#9788;</div>
+</footer>
+
+    
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- script -->
+    <script src="script/script-.js"></script>
+    <script src="js/script-xml.js"></script>
+
+    </body>
+</html>

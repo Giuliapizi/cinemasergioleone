@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Mappa dei luoghi - Il cinema di Sergio Leone</title>
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+  <!-- CSS personalizzato -->
+  <link rel="stylesheet" href="stile/stile.css" />
+
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+      border: 3px solid #8b4513;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .legend {
+      background: #fff;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 0.7rem;
+      margin-bottom: 3rem;
+    }
+
+    .legend div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .color-box {
+      width: 18px;
+      height: 18px;
+      margin-right: 8px;
+      border-radius: 4px;
+    }
+
+    .dropdown-filtri {
+      margin: 15px 0;
+    }
+
+  /* --- Titoli sezioni --- */
+  h2.text-center {
+  font-family: 'Alfa Slab One', serif;
+  color: #5a3a1c; /* marrone caldo */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  font-size: 1.8rem;
+  }
+
+  h2.text-center::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #a97450; /* linea decorativa */
+  margin: 0.8rem auto 0;
+  border-radius: 2px;
+  }
+
+
+  </style>
+</head>
+
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar shadow-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">Il cinema di Sergio Leone &#127797;</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Introduzione</a>
+          </li>
+
+          <!-- Dropdown Catalogo -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Catalogo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="catalogo.html">Lista</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="mappa.html">Luoghi</a></li>
+              <li><a class="dropdown-item" href="timeline.html">Timeline</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropdown Percorsi -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Percorsi
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Tematiche</a></li>
+              <li><a class="dropdown-item" href="#">Attori</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Barra di ricerca -->
+        <form class="d-flex search-form" role="search">
+          <input class="form-control search-input" type="search" placeholder="Cerca..." aria-label="Search">
+          <button class="btn search-btn" type="submit">Cerca</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  
+  <!-- Contenuto -->
+  <main class="container mt-5 pt-5">
+    <h2 class="text-center mb-4">🎥 I luoghi dei film di Sergio Leone</h2>
+
+    <!-- Filtro -->
+    <div class="dropdown-filtri text-center">
+      <select id="filmFilter" class="form-select w-auto d-inline-block">
+        <option value="all">Mostra tutti i film</option>
+      </select>
+    </div>
+
+    <!-- Mappa -->
+    <div id="map"></div>
+
+    <!-- Legenda -->
+    <div class="legend mt-3">
+      <strong>Legenda film</strong>
+      <div><div class="color-box" style="background-color:#d9534f;"></div>Per un pugno di dollari (1964)</div>
+      <div><div class="color-box" style="background-color:#f0ad4e;"></div>Per qualche dollaro in più (1965)</div>
+      <div><div class="color-box" style="background-color:#5bc0de;"></div>Il buono, il brutto, il cattivo (1966)</div>
+      <div><div class="color-box" style="background-color:#5cb85c;"></div>C’era una volta il West (1968)</div>
+      <div><div class="color-box" style="background-color:#8a6d3b;"></div>Giù la testa (1971)</div>
+      <div><div class="color-box" style="background-color:#6f42c1;"></div>C’era una volta in America (1984)</div>
+    </div>
+  </main>
+
+  <!-- Prefooter -->
+  <section>
+    <div class="pre-footer">&clubs; Credits | Licenze &clubs;</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">&copy; Giulia Pizi 2025 - Corso di Digital Humanities e Patrimonio Culturale &#9788;</div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script Leaflet -->
+  <script>
+    const map = L.map('map').setView([40, 0], 3);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const filmColors = {
+      "Per un pugno di dollari (1964)": "#d9534f",
+      "Per qualche dollaro in più (1965)": "#f0ad4e",
+      "Il buono, il brutto, il cattivo (1966)": "#5bc0de",
+      "C’era una volta il West (1968)": "#5cb85c",
+      "Giù la testa (1971)": "#8a6d3b",
+      "C’era una volta in America (1984)": "#6f42c1"
+    };
+
+    const locations = [
+      { film: "Per un pugno di dollari (1964)", luogo: "Almería, Spagna", coords: [36.834, -2.463] },
+      { film: "Per un pugno di dollari (1964)", luogo: "Tabernas Desert, Spagna", coords: [37.05, -2.39] },
+      { film: "Per qualche dollaro in più (1965)", luogo: "Guadix, Granada, Spagna", coords: [37.3, -3.13] },
+      { film: "Il buono, il brutto, il cattivo (1966)", luogo: "Sad Hill Cemetery, Burgos", coords: [42.015, -3.383] },
+      { film: "C’era una volta il West (1968)", luogo: "Monument Valley, USA", coords: [36.998, -110.098] },
+      { film: "Giù la testa (1971)", luogo: "Durango, Messico", coords: [24.0277, -104.6532] },
+      { film: "C’era una volta in America (1984)", luogo: "New York, USA", coords: [40.7128, -74.006] },
+      { film: "C’era una volta in America (1984)", luogo: "Cinecittà Studios, Roma", coords: [41.857, 12.586] }
+    ];
+
+    const filterSelect = document.getElementById('filmFilter');
+    Object.keys(filmColors).forEach(film => {
+      const opt = document.createElement('option');
+      opt.value = film;
+      opt.textContent = film;
+      filterSelect.appendChild(opt);
+    });
+
+    let markers = [];
+    function updateMap(filter) {
+      markers.forEach(m => map.removeLayer(m));
+      markers = [];
+
+      locations.forEach(loc => {
+        if (filter === "all" || loc.film === filter) {
+          const color = filmColors[loc.film];
+          const marker = L.circleMarker(loc.coords, {
+            radius: 8,
+            color: color,
+            fillColor: color,
+            fillOpacity: 0.8
+          }).bindPopup(`<b>${loc.film}</b><br>${loc.luogo}`).addTo(map);
+          markers.push(marker);
+        }
+      });
+    }
+
+    filterSelect.addEventListener('change', () => {
+      updateMap(filterSelect.value);
+    });
+
+    updateMap("all");
+  </script>
+</body>
+</html>

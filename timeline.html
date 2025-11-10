@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Timeline - Il cinema di Sergio Leone</title>
+  
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+  <!-- CSS personalizzato -->
+  <link rel="stylesheet" href="stile/stile.css" />
+
+  <style>
+    /* --- Timeline --- */
+    body {
+      background-color: #fff8f2;
+    }
+
+    .timeline-container {
+      position: relative;
+      margin: 6rem auto;
+      padding: 2rem 0;
+      max-width: 900px;
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background-color: #a97450;
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      width: 50%;
+      padding: 1.5rem 2rem;
+      box-sizing: border-box;
+    }
+
+    .timeline-item.left {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item.right {
+      left: 50%;
+    }
+
+    .timeline-content {
+      background-color: #fff;
+      border: 2px solid #a97450;
+      border-radius: 15px;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      top: 1.2rem;
+      width: 18px;
+      height: 18px;
+      background-color: #a97450;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      z-index: 1;
+    }
+
+    .timeline-item.left::before {
+      right: -10px;
+    }
+
+    .timeline-item.right::before {
+      left: -10px;
+    }
+
+    .timeline-content h3 {
+      font-family: 'Alfa Slab One', serif;
+      color: #5a3a1c;
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-content p {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+      }
+      .timeline-line {
+        left: 10px;
+      }
+      .timeline-item::before {
+        left: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg custom-navbar shadow-sm fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">Il cinema di Sergio Leone &#127797;</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Introduzione</a></li>
+
+          <!-- Dropdown Catalogo -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Catalogo
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="catalogo.html">Lista</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="mappa.html">Luoghi</a></li>
+              <li><a class="dropdown-item" href="timeline.html">Timeline</a></li>
+            </ul>
+          </li>
+
+          <!-- Dropdown Percorsi -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Percorsi
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Tematiche</a></li>
+              <li><a class="dropdown-item" href="#">Attori</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <form class="d-flex search-form" role="search">
+          <input class="form-control search-input" type="search" placeholder="Cerca..." aria-label="Search">
+          <button class="btn search-btn" type="submit">Cerca</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero-catalogo" style="margin-top:5.5rem;">
+    <h2 class="titolo-catalogo">Catalogo <span>Timeline</span></h2>
+  </div>
+
+  <!-- Timeline -->
+  <section class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>1964 — Per un pugno di dollari</h3>
+        <p>Il film che inaugura lo Spaghetti Western e l’iconico sodalizio con Clint Eastwood.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>1965 — Per qualche dollaro in più</h3>
+        <p>Secondo capitolo della “trilogia del dollaro”, con Lee Van Cleef accanto a Eastwood.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>1966 — Il buono, il brutto, il cattivo</h3>
+        <p>Capolavoro di Leone e Morricone, emblema del western all’italiana.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>1968 — C’era una volta il West</h3>
+        <p>Un western epico con Henry Fonda e Claudia Cardinale, ricco di simbolismo e pathos.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <h3>1971 — Giù la testa</h3>
+        <p>Ambientato durante la rivoluzione messicana, riflette sui temi di libertà e disillusione.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <h3>1984 — C’era una volta in America</h3>
+        <p>Il capolavoro finale di Leone, un’epopea sulla memoria, l’amicizia e la decadenza.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prefooter -->
+  <section>
+    <div class="pre-footer">&clubs; Credits | Licenze &clubs;</div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">&copy; Giulia Pizi 2025 - Corso di Digital Humanities e Patrimonio Culturale &#9788;</div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

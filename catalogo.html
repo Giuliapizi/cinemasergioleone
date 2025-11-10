@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html>
+     <!-- head e body sono i due marcatori che dipendono da html -->
+     <head>
+        
+        <title>Il cinema di Sergio Leone</title>
+        
+        <!-- charset è per settare unicode -->
+        <meta charset="UTF-8" />
+        <meta name="description" content="Sito dedicato al cinema di Sergio Leone"/>
+        <meta name="keywords" content="Sergio Leone, film, attori"/>
+        <meta name="author" content="Giulia Pizi" />
+        
+        <!-- viewport è per la visualizzazione su device diversi -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+        
+        <!-- Bootstrap CSS (v5) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+          <link rel="stylesheet" href="stile/stile.css" />
+
+          <!-- Metadati DC -->
+          <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+          <meta name="DC.Title" content="Il cinema di Sergio Leone">
+          <meta name="DC.Creator" content="Pizi, Giulia">
+          <meta name="DC.Subject" content="Cinema">
+          <meta name="DC.Subject" content="Letteratura">
+          <meta name="DC.Description" content="Sito web per conoscere il cinema di Sergio Leone">
+          <meta name="DC.Publisher" content="Università di Bologna">
+          <meta name="DC.Date" content="2025">
+          <meta name="DC.Type" content="Text">
+          <meta name="DC.Format" content="HTML">
+          <meta name="DC.Identifier" content="https://www.imdb.com/title/tt0087843/">
+          <meta name="DC.Source" content="Sito web per esame">
+          <meta name="DC.Language" content="Ita">
+          <meta name="DC.Coverage" content="Bologna">
+      </head>
+     
+  
+     <body class="filmografia">
+
+        <!-- abbiamo diverse div -->
+        <nav class="navbar navbar-expand-lg custom-navbar shadow-sm fixed-top">
+        <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand fw-bold" href="#">Il cinema di Sergio Leone &#127797;</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+      <!-- Link -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Lista link -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Introduzione</a>
+        </li>
+
+        <!-- Dropdown Catalogo -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Catalogo
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Lista</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="mappa.html">Luoghi</a></li>
+            <li><a class="dropdown-item" href="timeline.html">Timeline</a></li>
+          </ul>
+        </li>
+
+        <!-- Dropdown Percorsi -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Percorsi
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Tematiche</a></li>
+            <li><a class="dropdown-item" href="#">Attori</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Barra di ricerca -->
+      <form class="d-flex search-form" role="search">
+      <input class="form-control search-input" type="search" placeholder="Cerca..." aria-label="Search">
+      <button class="btn search-btn" type="submit">Cerca</button>
+      </form>
+      </div>
+      </div>
+    </nav>
+
+  
+   <!-- Catalogo -->
+   <div class="hero-catalogo">
+   <h2 class="titolo-catalogo">
+    Catalogo <span>Lista</span>
+   </h2>
+   </div>
+
+
+   <!-- Wrapper principale -->
+   <div class="content-wrapper" style="margin-top:5.5rem; display:flex; flex-direction:column; flex:1;">
+
+   <!-- Layout due colonne -->
+   <div class="catalogo-layout">
+
+    
+    <!-- Sidebar -->
+    <!-- Breadcrumbs -->
+    <div class="sidebar">
+      <ul class="breadcrumb breadcrumb-western">
+        <li><a href="index.html">Home</a></li>
+        <li>Lista</li>
+      </ul>
+      <div class="filters">
+        <p>Riordina la lista:</p>
+        <button class="btn-filtri">Ordine cronologico</button>
+        <button class="btn-filtri">Dalla A alla Z</button>
+        <button class="btn-filtri">Dalla Z alla A</button>
+      </div>
+    
+
+     <!-- Dropdown e tab interattivi -->
+     <div class="dropdown">
+     <button onclick="myFunction()" class="dropbtn">Filtra la lista</button>
+     <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    <a href="#about">Film</a>
+    <a href="#base">Immagini</a>
+    <a href="#blog">Libri</a>
+    <a href="#contact">Video</a>
+    <a href="#custom">Musiche</a>
+     </div>
+     </div>
+     </div>
+
+    <!-- Contenuto tabs -->
+    <div class="tab-container">
+      <div class="tab-box">
+        <div class="tab">
+          <button class="tablinks active" onclick="openCity(event, 'all')">&#127775; Tutti i contenuti</button>
+          <button class="tablinks" onclick="openCity(event, 'film')">&#127916; Film</button>
+          <button class="tablinks" onclick="openCity(event, 'imm')">&#128248; Immagini</button>
+          <button class="tablinks" onclick="openCity(event, 'libri')">&#128218; Libri</button>
+          <button class="tablinks" onclick="openCity(event, 'video')">&#127909; Video</button>
+          <button class="tablinks" onclick="openCity(event, 'video')">&#127925; Musiche</button>
+        </div>
+
+        <!-- Cards -->
+        <div id="all" class="tabcontent active">
+          <div class="cards-container">
+            <div class="card-item film">
+              <img src="img/perunpugno.avif" alt="Per un pugno di dollari">
+              <div class="card-content">
+                <span class="badge film">&#127916; Film</span>
+                <h3>Per un pugno di dollari (1964)</h3>
+                <p>Regia di Sergio Leone — Lee Van Cleef, Clint Eastwood, Gian Maria Volonté.</p>
+                <a href="#" class="card-btn">Scopri di più</a>
+              </div>
+            </div>
+            <div class="card-item img">
+              <img src="img/immagineset.jpg" alt="Immagine set">
+              <div class="card-content">
+                <span class="badge img">&#128248; Immagine</span>
+                <h3>Immagine di Leone sul set</h3>
+                <p>  </p>
+                <a href="#" class="card-btn">Tutti i metadati</a>
+              </div>
+            </div>
+
+         <div class="card-item film">
+        <img src="img/onceuponatime.jpg" alt="C'era una volta in America (1984)">
+       <div class="card-content">
+        <span class="badge film">&#127916; Film</span>
+       <h3>C'era una volta in America (1984)</h3>
+       <p>Regia di Sergio Leone — Robert De Niro, James Woods, Elizabeth McGovern.</p>
+      <a href="itemfilm.html" class="card-btn">Tutti i metadati</a>
+      </div>
+      </div>
+
+         <div class="card-item img">
+              <img src="img/immagineset1.jpg" alt="Immagine set">
+              <div class="card-content">
+                <span class="badge img">&#128248; Immagine</span>
+                <h3>Immagine di Leone e attori sul set</h3>
+                <p>  </p>
+                <a href="#" class="card-btn">Tutti i metadati</a>
+              </div>
+            </div>
+
+
+            <div class="card-item book">
+              <img src="img/libro.jpg" alt="Biografia di Leone">
+              <div class="card-content">
+                <span class="badge book">&#128218; Libro</span>
+                <h3>C'era una volta il cinema: i miei film, la mia vita</h3>
+                <p>Biografia ufficiale di Sergio Leone</p>
+                <a href="itemlibro.html" class="card-btn">Tutti i metadati</a>
+              </div>
+            </div>
+            <div class="card-item video">
+              <img src="img/videorai.png" alt="Video intervista Rai">
+              <div class="card-content">
+                <span class="badge video">&#127909; Video</span>
+                <h3>Intervista a Sergio Leone</h3>
+                <p>Archivio RAI — dietro le quinte della trilogia del dollaro.</p>
+                <a href="#" class="card-btn">Tutti i metadati</a>
+              </div>
+            </div>
+
+      <div class="card-item film">
+       <img src="img/giula.jpg" alt="Giù la testa (1971)">
+       <div class="card-content">
+      <span class="badge film">&#127916; Film</span>
+      <h3>Giù la testa (1971)</h3>
+      <p>Regia di Sergio Leone — Rod Steiger, James Coburn.</p>
+      <a href="#" class="card-btn">Tutti i metadati</a>
+     </div>
+     </div>
+
+      <div class="card-item img">
+      <img src="img/story.jpg" alt="Storyboard de Il buono, il brutto, il cattivo">
+      <div class="card-content">
+      <span class="badge img">&#128248; Immagine</span>
+      <h3>Storyboard di una scena de “Il buono, il brutto, il cattivo”</h3>
+     <p>Disegno preparatorio per la sequenza finale nel cimitero di Sad Hill.</p>
+     <a href="#" class="card-btn">Tutti i metadati</a>
+     </div>
+     </div>
+
+        <div class="card-item book">
+        <img src="img/biografialeone.jpg" alt="Sergio Leone: L’uomo, il mito, il cinema">
+        <div class="card-content">
+        <span class="badge book">&#128218; Libro</span>
+        <h3>Sergio Leone: by himself</h3>
+        <p>Analisi critica e biografia a cura di Christopher Frayling.</p>
+        <a href="#" class="card-btn">Tutti i metadati</a>
+        </div>
+        </div>
+
+          <div class="card-item music">
+          <img src="img/ennio.png" alt="Tema di C’era una volta il West">
+          <div class="card-content">
+          <span class="badge music">&#127925; Musica</span>
+          <h3>Tema di “C’era una volta il West”</h3>
+          <p>Composto da Ennio Morricone — colonna sonora iconica del 1968.</p>
+          <a href="#" class="card-btn">Tutti i metadati</a>
+          <a href="#" class="card-btn">Ascolta su spotify</a>
+          </div>
+         </div>   
+          </div>
+
+        
+      
+
+          <!-- Paginazione -->
+          <div class="pagination">
+            <button class="page-btn disabled">«</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">»</button>
+          </div>
+        </div>
+
+        <div id="film" class="tabcontent">
+          <p>Contenuto Film...</p>
+        </div>
+        <div id="imm" class="tabcontent">
+          <p>Contenuto Immagini...</p>
+        </div>
+        <div id="libri" class="tabcontent">
+          <p>Contenuto Libri...</p>
+        </div>
+        <div id="video" class="tabcontent">
+          <p>Contenuto Video...</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div> <!-- chiude catalogo-layout -->
+</div> <!-- chiude content-wrapper -->
+
+
+
+
+
+<!-- Pre-footer -->
+<section>
+  <div class="pre-footer">&clubs; Credits | Licenze &clubs;</div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer">&copy; Giulia Pizi 2025 - Corso di Digital Humanities e Patrimonio Culturale &#9788;</div>
+</footer>
+
+    
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- script -->
+    <script src="script/script-.js"></script>
+
+    <script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+} 
+</script>
+
+    </body>
+</html>
