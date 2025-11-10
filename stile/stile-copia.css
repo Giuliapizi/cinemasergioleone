@@ -1,0 +1,1333 @@
+/* html */
+html {
+  height: 100%;
+}
+
+/* Migliora fluidità e resa dei font su tutti i browser */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base font size e line-height per leggibilità coerente */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Base font size e line-height per leggibilità coerente */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* body*/
+
+body {
+  background-image: url("../img/sfondosito.png");
+  background-size: cover;           /* copre tutta l'area */
+  background-position: center;      /* centra l'immagine */
+  background-attachment: fixed;     
+  background-repeat: no-repeat;     
+  background-color: #e6d5b8;       
+  position: relative;               
+  min-height: 100vh;                /* assicura che il body occupi tutto lo schermo */
+  margin: 0;
+  font-family: 'Arial', sans-serif; 
+}
+
+/* Overlay */
+body::before {
+  content: "";
+  position: fixed;                           /* rimane fisso durante lo scroll */
+  inset: 0;                                  /* copre tutto il viewport */
+  background: rgba(235, 210, 165, 0.25);    /* overlay semi-trasparente */
+  backdrop-filter: blur(1px);               
+  -webkit-backdrop-filter: blur(1px);       
+  z-index: -1;                               /* sempre dietro i contenuti */
+  pointer-events: none;                      /* permette di cliccare sopra */
+  transition: background 0.3s ease;          
+}
+
+
+/* contenuto centrato e leggibile */
+.main-content {
+  position: relative;
+  z-index: 1;          /* sopra l'overlay */
+  padding: 2rem;
+  color: #3a2e21;      /* colore leggibile sopra overlay */
+}
+
+
+/* Navbar */
+.custom-navbar {
+  background-color: #f0e6d2; /* beige sabbia chiaro */
+  border-bottom: 2px solid #b58b4f; /* bordo marrone/ocra */
+  font-family: 'Alfa Slab One', cursive;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Brand stile manifesto */
+.navbar-brand {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 1.5rem;
+  font-weight: 400; /* meno pesante */
+  letter-spacing: 1px;
+  color: #7c4a2f !important;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+
+/* Link */
+.nav-link {
+  color: #5a3b1c !important;
+  font-weight: 400; /* meno pesante */
+  padding: 0.25rem 0.75rem;
+  position: relative;             
+  transition: all 0.3s ease;
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 0.5px;
+}
+
+.nav-link:hover {
+  color: #b0722e !important;
+  text-decoration: none;
+}
+
+/* Link attivo */
+.nav-link.active {
+  background-color: #d9c18c;
+  color: #3e2f1c !important;
+  border-radius: 4px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  background-color: #f9f2e6;
+  border: 1px solid #b58b4f;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  color: #5a3b1c !important;
+  transition: all 0.3s ease;
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: 0.5px;
+}
+
+.dropdown-item:hover {
+  transform: translateX(5px) scale(1.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  background-color: #b0722e !important;
+  color: #fff !important;
+}
+
+
+/* Freccetta dropdown */
+.nav-link.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;      
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+}
+
+/* Contenitore form */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Input */
+.search-input {
+  height: 36px;
+  font-size: 0.9rem;
+}
+
+/* Bottone */
+.search-btn {
+  height: 36px;
+  font-size: 0.9rem;
+  padding: 0 14px;
+  background-color: #7c4a2f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.search-btn:hover {
+  background-color: #5c3420;
+}
+
+
+
+/* Effetti */
+
+/* Sottolineatura animata */
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #b0722e;
+  transition: width 0.3s;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+
+
+/*Carousel*/
+
+#carouselExampleDark {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Imposta un'altezza fissa per tutte le slide */
+.carousel-item {
+  height: 350px; 
+}
+
+/* Immagini */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; 
+  
+}
+
+
+/* Carousel full width e altezza */
+#carouselExampleDark,
+.carousel-inner,
+.carousel-item {
+  height: 80vh; /* quasi tutto lo schermo */
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* mantiene proporzioni senza deformare */
+}
+
+/* Caption centrata verticalmente */
+.carousel-caption {
+  bottom: 50%; /* centra verticalmente */
+  transform: translateY(50%);
+}
+
+/* Pulsanti personalizzati */
+.btn-western {
+  margin: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/* Titolo principale della slide */
+.carousel-caption h5 {
+  font-family: 'Alfa Slab One', serif;
+  color: #c89b4f; /* sabbia western */
+  text-shadow: 2px 2px 6px #000;
+  font-size: 0,5rem;          
+  text-transform: uppercase; 
+  margin-bottom: 0.5rem;
+}
+
+/* Testo descrizione più piccolo e in corsivo */
+.carousel-caption p {
+  font-family: 'Georgia', serif;  /* elegante e leggibile */
+  font-size: 1rem;                /* più piccolo del titolo */
+  font-style: italic;              /* corsivo */
+  color: #f5d7a1;                 /* crema chiaro */
+  text-shadow: 2px 2px 5px #000;
+  margin-bottom: 1rem;            /* spazio tra testo e bottone */
+  text-transform: none;            /* nessuna trasformazione maiuscola */
+}
+
+
+.carousel-caption {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.40); 
+  z-index: 1;
+}
+
+.carousel-caption {
+  z-index: 2;
+}
+
+
+
+/* Posizionamento caption */
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;       /* distanza dal fondo della slide */
+  left: 50%;          /* centro orizzontale */
+  transform: translateX(-50%); /* corregge l’allineamento al centro */
+  text-align: center; /* centra testo interno */
+  z-index: 2;
+}
+
+
+/* controlli */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3rem;
+  height: 3rem;
+  filter: invert(1); 
+  opacity: 0.6;
+  transition: opacity 0.2;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  opacity: 1;
+}
+
+/* Area cliccabile più ampia */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 10%;
+  filter: invert(100%) sepia(20%) saturate(500%) hue-rotate(30deg);
+}
+
+/* indicatori */
+.carousel-indicators [data-bs-target] {
+  background-color: #f5d7a1;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  transition: opacity 0.6s ease;
+  margin: 0 4px;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: #c89b4f;
+
+}
+
+/* Puntini di scorrimento */
+.carousel-indicators [data-bs-target] {
+  background-color: #f5d7a1 !important; /* sabbia chiaro */
+  opacity: 1 !important;               /* piena visibilità */
+  border: 1px solid #c89b4f;           /* contorno opzionale */
+}
+
+/* Puntino attivo */
+.carousel-indicators .active {
+  background-color: #c89b4f !important; /* sabbia calda */
+  opacity: 1 !important;
+  border-color: #7c4a2f;                /* contorno attivo */
+}
+
+
+/* Didascalie */
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  width: 70%;
+  left: 50%;
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+
+/* Transizioni */
+.carousel-inner {
+  transition: transform 0.6s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+  .carousel-item {
+    height: 300px;
+  }
+  .carousel-caption {
+    font-size: 0.9rem;
+    width: 90%;
+    padding: 0.5rem 1rem;
+  }
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Bottone carosello */
+/* Bottone stile western */
+.btn-western {
+  background-color: #7c4a2f;
+  color: #f5d7a1;
+  border: 1px solid #7c4a2f;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin: 0 4px;   /* piccolo spazio tra bottoni */
+  transition: 0.2s;
+}
+
+.btn-western:hover {
+  background-color: #d9883a;
+  border-color: #d9883a;
+  color: #000;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+/* Progetto */
+.progetto {
+  width: 100%;
+  padding: 1.5rem 2rem; 
+  background: rgba(255, 245, 230, 0.35); 
+  border-top: 2px solid rgba(217, 150, 102, 0.3); 
+  border-bottom: 2px solid rgba(217, 150, 102, 0.3); 
+  font-family: 'Cinzel', serif;     /* font cinema */
+  color: #2b1f0f;               /* colore testo più scuro */
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;            /* centra il contenuto */
+}
+
+/* Titolo h2 */
+.progetto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4d2e00;               /* marrone scuro più caldo */
+  letter-spacing: 1px;
+  font-weight: bold;         /* Testo in grassetto */
+}
+
+/* Paragrafo */
+.progetto p {
+  font-size: 1rem;
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto 1.5rem auto; 
+  color: #2b1f0f;               /* stesso colore testo principale */
+}
+
+/* Pulsante western centrato */
+.progetto .btn-western {
+  display: inline-block;
+  background-color: #7b3f00;
+  color: #fff3e6;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 2px solid #d99a66;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.progetto .btn-western:hover {
+  background-color: #d99a66;
+  color: #3a2e21;
+  transform: translateY(-2px);
+}
+
+
+/*Strumenti per esplorare il catalogo*/
+#strumenti-catalogo h2 {
+  font-family: 'Cinzel', serif;       
+  font-size: 2rem;                  
+  color: #4d2e00;                     /* marrone scuro */
+  letter-spacing: 2px;                /* spaziatura elegante */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* leggero effetto ombra */
+  margin-bottom: 2rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+
+
+/* Card catalogo*/
+.border-western {
+  border: 2px solid #d99a66;
+  border-radius: 10px;
+  background: rgba(255, 245, 230, 0.4); /* leggermente trasparente */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Pulsante western */
+.btn-western {
+  background-color: #7b3f00;
+  color: #fff3e6;
+  border: 2px solid #d99a66;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-western:hover {
+  background-color: #d99a66;
+  color: #3a2e21;
+  transform: translateY(-2px);
+}
+
+/* Titoli card */
+.card-title {
+  font-family: 'Cinzel', serif;
+  color: #4d2e00;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragrafi card */
+.card-text {
+  color: #2b1f0f;
+  font-size: 0.95rem;
+  flex-grow: 1; /* spinge bottone in basso */
+}
+
+
+
+
+/* Sezione stile progetto */
+.sezione-progetto {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 245, 230, 0.35);
+  border-top: 2px solid rgba(217,150,102,0.3);
+  border-bottom: 2px solid rgba(217,150,102,0.3);
+  font-family: 'Cinzel', serif;
+  color: #2b1f0f;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+/* Titolo centrato */
+.sezione-progetto .catalogo h2 {
+  font-size: 2rem;
+  color: #4d2e00;
+  letter-spacing: 1px;
+  text-align: center; /* centrato */
+  margin-bottom: 1rem; /* distanza dal primo accordion */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  font-weight: bold;
+}
+
+/* Accordion */
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centrati */
+  gap: 0.5rem; /* distanza ridotta tra gli accordion */
+}
+
+.accordion {
+  background-color: #7b3f00;
+  color: #fff3e6;
+  cursor: pointer;
+  padding: 0.8rem 1.2rem;
+  width: 60%;
+  max-width: 500px;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.accordion:hover {
+  background-color: #d99a66;
+  color: #3a2e21;
+}
+
+.panel {
+  background-color: rgba(255,245,230,0.2);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 1rem;
+  border-radius: 5px;
+  width: 60%;
+  max-width: 500px;
+  text-align: justify;
+  color: #2b1f0f;
+}
+
+/* Accordion con simbolo + / - */
+.accordion::after {
+  content: "+";              /* simbolo iniziale */
+  float: right;              /* a destra del pulsante */
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Quando l'accordion è attivo cambia in - */
+.accordion.active::after {
+  content: "-";
+}
+
+
+
+/* Pre-footer=stile footer */
+.pre-footer {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: #fff3e6;                 /* testo chiaro */
+  background: #a97450;            /* marrone più chiaro */
+  padding: 0.6rem;                
+  border-top: 1px solid #d99a66;  /* bordo superiore sottile */
+  border-bottom: 1px solid #d99a66; /* bordo inferiore sottile */
+  font-family: 'Georgia', serif;  
+  letter-spacing: 1px;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 0.6rem;                /* fasce sottili */
+  background: #a97450;            /* stesso marrone chiaro del pre-footer */
+  color: #fff3e6;                 /* testo chiaro */
+  font-size: 0.9rem;
+  font-family: 'Georgia', serif;
+  border-top: 1px solid #d99a66;  /* bordo superiore sottile */
+}
+
+.footer {
+  margin: 0;
+}
+
+/* Simboli decorativi nel pre-footer */
+.pre-footer::before,
+.pre-footer::after {
+  content: "♣";                   /* simboli a sinistra e destra */
+  margin: 0 5px;
+}
+
+
+
+/* Link nel pre-footer e footer senza sottolineatura */
+.pre-footer a,
+.footer a {
+  color: #fff3e6 !important;          
+  text-decoration: none !important;   /* rimuove sottolineatura */
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.pre-footer a:hover,
+.footer a:hover {
+  color: #ffd9b3 !important;          /* colore chiaro al passaggio del mouse */
+  text-decoration: none !important;   /* niente sottolineatura */
+}
+
+
+
+/*pag catalogo*/
+
+/* Layout due colonne */
+.catalogo-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr; 
+  gap: 20px;
+  max-width: 1200px; 
+  margin: 0 auto;
+  align-items: start; /* aiuta l'allineamento verticale */
+}
+
+/* Sidebar sinistra (breadcrumbs + filtri) */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Breadcrumbs */
+.breadcrumb-western {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  background: rgba(255, 245, 230, 0.2);
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 260px;
+  margin: 0;
+  margin-top: 0;
+}
+
+.breadcrumb-western li + li::before {
+  content: "›";
+  margin: 0 0.5rem;
+  color: #4d2e00;
+}
+
+.breadcrumb-western a {
+  text-decoration: none;
+  color: #4d2e00;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.breadcrumb-western a:hover {
+  color: #d99a66;
+}
+
+/* Filtri */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: 'Alfa Slab One', serif;
+  font-size: 0.9rem;
+  color: #5c3b1e;
+}
+
+.btn-filtri {
+  width: fit-content;
+  padding: 6px 16px;
+  border: 2px solid #5c3b1e;
+  background-color: rgba(230, 210, 165, 0.35);
+  color: #5c3b1e;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Alfa Slab One', serif;
+}
+
+.btn-filtri:hover {
+  background-color: #5c3b1e;
+  color: #fff;
+}
+
+/* tabs */
+
+.tab-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tab-box {
+ width: 100%;
+ max-width: 1100px; /* limite per non sbordare */
+}
+
+/* Barra tabs */
+.tab {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  background-color: #f5e6d5;
+  border-bottom: 2px solid #7c4a2f;
+}
+
+/* Bottoni tabs */
+.tab button {
+  padding: 10px 18px;
+  border: none;
+  background: transparent;
+  color: #5c3b1e;
+  cursor: pointer;
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0;
+  transition: 0.3s;
+}
+
+.tab button:hover {
+  background-color: #d99a66;
+  color: #fff;
+}
+
+.tab button.active {
+  background-color: #7b3f00;
+  color: #fff;
+}
+
+/* Contenuto tabs */
+.tabcontent {
+  display: none;
+  padding: 1rem;
+  border: 2px solid #7c4a2f;
+  border-top: none;
+  background-color: rgba(255,245,230,0.35);
+  border-radius: 0 0 5px 5px;
+  margin-top: -2px;
+}
+
+.tabcontent.active { display: block; }
+
+/* wrapper e footer fissi*/
+
+.content-wrapper {
+  padding-bottom: 4rem;
+  min-height: 75vh;
+   margin-top: 1rem;
+  padding-top: 0;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .catalogo-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 0;
+  }
+
+ 
+
+  .tab-box {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .tab {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Container cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Card */
+.card-item {
+  background: #fff8ec;
+  border: 2px solid #7b4a28;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 14px rgba(0,0,0,0.3);
+}
+
+/* Immagine */
+.card-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Contenuto */
+.card-content {
+  padding: 1rem;
+  font-family: 'Cinzel', serif;
+}
+
+/* Titolo */
+.card-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Badge categoria */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.badge.film { background: #9e5b27; color: #fff; }
+.badge.img { background: #b88b4a; color: #fff; }
+.badge.book { background: #6e3c1d; color: #fff; }
+.badge.video { background: #a86f2a; color: #fff; }
+
+/* Bottone */
+.card-btn {
+  display: inline-block;
+  margin-top: 0.7rem;
+  padding: 6px 14px;
+  background: #7b3f00;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  transition: 0.3s;
+}
+
+.card-btn:hover {
+  background: #d99a66;
+  color: #4d2e00;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .card-item img {
+    height: 150px;
+  }
+}
+
+
+/* Paginazione */
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+}
+
+.page-btn {
+  border: 2px solid #5c3b1e;
+  background: rgba(230,210,165,0.4);
+  padding: .35rem .8rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.page-btn.active,
+.page-btn:hover {
+  background: #5c3b1e;
+  color: #fff;
+}
+
+.page-btn.disabled {
+  pointer-events: none;
+  opacity: .4;
+}
+
+/* Effetto leggero */
+.card-item {
+  position: relative;
+}
+
+.card-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://www.transparenttextures.com/patterns/dust.png');
+  opacity: .18;
+  pointer-events: none;
+}
+
+
+
+/* Fascia titolo sotto navbar */
+.hero-catalogo {
+  width: 100%;
+  padding: 6px 0; 
+  border-bottom: 2px solid #7b3f00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+
+/* Testo titolo */
+.titolo-catalogo {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 2rem;
+  color: #4d2e00; /* marrone scuro western */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Colore più chiaro per "Lista" */
+.titolo-catalogo span {
+  color: #d4a676; /* tono più chiaro */
+}
+
+/* elimina lo spazio sotto la fascia */
+.hero-catalogo {
+  margin-bottom: 1rem !important;
+  padding-bottom: 1.2rem !important;
+}
+
+/* elimina spazio sopra breadcrumb */
+.breadcrumb-western {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* riduce spazio container tabs */
+.tab-container {
+  margin-top: 0.5rem !important;
+  padding-top: 0 !important;
+}
+
+/* se c'è un main/wrapper */
+.content-wrapper,
+main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+
+
+
+
+
+/* body catalogo */
+body.filmografia {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* occupa tutto il viewport */
+  margin: 0;
+  background-image: url("../img/sfondosito.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #e6d5b8;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Overlay leggero */
+body.filmografia::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(235, 210, 165, 0.25);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Wrapper contenuto centrale che si espande */
+.content-wrapper {
+  flex: 1; /* occupa tutto lo spazio disponibile */
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* prefooter e footer */
+.pre-footer,
+.footer {
+  flex-shrink: 0; /* non si comprimono mai */
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  background: #a97450;
+  color: #fff3e6;
+  font-family: 'Georgia', serif;
+  border-top: 1px solid #d99a66;
+  margin: 0 auto;
+}
+
+/* Simboli decorativi nel pre-footer */
+.pre-footer::before,
+.pre-footer::after {
+  content: "♣";
+  margin: 0 5px;
+}
+
+/* Link nel footer e pre-footer */
+.pre-footer a,
+.footer a {
+  color: #fff3e6 !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.pre-footer a:hover,
+.footer a:hover {
+  color: #ffd9b3 !important;
+}
+
+
+/* catalogo */
+.catalogo-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.breadcrumb-western {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  background: rgba(255, 245, 230, 0.2);
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 260px;
+  margin: 0;
+}
+
+.breadcrumb-western li + li::before {
+  content: "›";
+  margin: 0 0.5rem;
+  color: #4d2e00;
+}
+
+.breadcrumb-western a {
+  text-decoration: none;
+  color: #4d2e00;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.breadcrumb-western a:hover {
+  color: #d99a66;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .catalogo-layout {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+
+
+/*item*/
+
+/* Contenitore principale: mantiene layout affiancato ma centrato */
+.catalogo-layout {
+  display: flex;
+  justify-content: center; /* centra tutto l’insieme orizzontalmente */
+  align-items: flex-start; /* in alto */
+  gap: 3rem; /* spazio tra breadcrumbs e contenuto */
+  width: 100%;
+  max-width: 1300px;
+  margin: -0,5rem auto;
+}
+
+/* Sidebar a sinistra */
+.sidebar {
+  flex: 0 0 220px;
+  margin-left: 1rem;
+  align-self: flex-start;
+}
+
+/* Rightcolumn centrata e più piccola */
+.rightcolumn {
+  flex: 0 0 700px; /* larghezza massima del blocco */
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Immagine centrata e adattata */
+.rightcolumn img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Titolo item */
+.rightcolumn h2 {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Blocchi di testo */
+.metadata {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+
+/* Box titolo coordinato con metadati */
+.titolo-item {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  
+}
+
+.titolo-item h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: #5b3924;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+
+/* Prefooter, footer */
+
+.pre-footer,
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+
+/* Pre-footer */
+.pre-footer {
+  text-align: center;
+  background: #a97450;
+  color: #fff3e6;
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  margin-top: 0; /* elimina lo spazio sopra */
+  border-top: 1px solid #d0bfa6;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: #a97450;
+  color: #fff3e6;
+  font-size: 0.9rem;
+  padding: 0.6rem;
+  margin-top: 0; /* evita lo stacco tra prefooter e footer */
+  border-top: none;
+}
+
+
+/* Sidebar Buttons */
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column; /* impila i bottoni uno sotto l'altro */
+    gap: 10px;
+    margin-top: 20px; /* spazio sotto le breadcrumb */
+}
+
+/* Stile base dei bottoni */
+.sidebar-buttons .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid #444; /* bordo coerente con il tema scuro */
+    color: #fff;
+    background-color: #333; /* colore scuro neutro */
+}
+
+/* Bottone specifico con icona */
+.sidebar-buttons .btn-cc img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Hover effetto */
+.sidebar-buttons .btn:hover {
+    background-color: #555;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Bottone download più evidente */
+.sidebar-buttons .btn-download {
+    background-color: #6c757d; /* grigio bootstrap */
+    border-color: #555;
+}
+
+.sidebar-buttons .btn-download:hover {
+    background-color: #5a6268;
+}
+
+
+/* Sezione colonna sonora nella sidebar */
+.sidebar-soundtrack {
+  background-color: #fff3e6;
+  border: 1px solid #d0bfa6;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.sidebar-soundtrack h3 {
+  font-family: 'Alfa Slab One', cursive;
+  color: #5b3924;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.sidebar-soundtrack .list-group-item {
+  background-color: transparent;
+  border: none;
+  color: #5b3924;
+  font-size: 0.95rem;
+  padding: 0.3rem 0;
+}
+
+.sidebar-soundtrack .btn:hover {
+  background-color: #8b5e3c !important;
+}
